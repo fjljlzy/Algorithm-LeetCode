@@ -1,2 +1,2 @@
-# Learning-Leetcode-Like-Rookie
+# Learning-LeetCode-Like-Rookie
 This will record my learning experience and codes for solving Leetcode problems. I mainly use Python language. 
