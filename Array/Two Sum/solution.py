@@ -1,3 +1,4 @@
+from typing import List
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         d = {}
@@ -7,3 +8,8 @@ class Solution:
                 return [index, d[diff]]
             else:
                 d[i] = index
+                
+if __name__ == '__main__':
+    # begin
+    s = Solution()
+    print （s.twoSum([3, 2, 4], 6)）
