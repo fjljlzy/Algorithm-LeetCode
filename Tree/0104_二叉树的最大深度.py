@@ -33,4 +33,19 @@ class Solution:
         #             nxt.append(node.right)
         #     q = nxt
         # return depth
-        
+
+        # BFS(deque) elegant!
+        if not root: 
+            return 0
+        q = collections.deque()
+        q.append(root)
+        depth = 0
+        while q:
+            for i in range(len(q)):
+                node = q.popleft()
+                if node.left:
+                    q.append(node.left)
+                if node.right:
+                    q.append(node.right)
+            depth += 1
+        return depth
