@@ -7,7 +7,7 @@
 - Vertices and Edges
 - Direct and undirected graph
 - Weighted and unweighted graph
-- DAG: Directed acyclic graph / Topological Sort
+- DAG: Directed acyclic graph / Topological Sort : O(V + E)
 - Traverse: BFS(deque), DFS(recursion call)
 - Minimum Spanning Tree
 
@@ -33,5 +33,15 @@ Ans: A directed acyclic graph (DAG) can represent order of doing things, Topolog
 
 Ans: DFS will call DFS recursively until it find the deepest node, when it exits, we append the current node into a stack. Finally we reverse the stack, which is the correct order of topological sort. (See wikipedia)
 
-##### Q6. 
+##### Q6. What is a minimum spanning tree?
 
+Ans: For weighted & undirected diagram, we can find a subset of edges to connect all vertices with minimal total weight. This is what we called minimum spanning tree.
+
+##### Q7. How to make a minimum spanning tree? Briefly talk about one algorithm.
+
+Ans: Kruskal algorithm. This algorithm can make a minimum spanning tree by adding edges greedily. First we sort the edges ordered by weight, then we add the edges greedily, from the smallest edges to the biggest edges, also each iteration we need to make sure it is a tree without loop.
+
+##### Q8. Briefly talk about Dijkstra algorithm?
+
+Ans: Dijkstra can find the shortest path for a weighted graph. And the weight is positive. First we initialize S and Q, S stores the minimum distance of each vertex to the source. Q is the set of all vertices. In each iteration, we extract the node in Q with minimum distance, and for this node, we traverse all its neighbor to relax the distance. And repeat this process, until Q is null.
+ 
