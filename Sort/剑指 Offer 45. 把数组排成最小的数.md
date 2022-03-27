@@ -1,3 +1,5 @@
+# 剑指 Offer 45. 把数组排成最小的数
+```python3
 class Solution:
     def minNumber(self, nums: List[int]) -> str:
         n = len(nums)
@@ -29,3 +31,4 @@ class Solution:
 
         quicksort(strs, 0, len(strs) - 1)
         return ''.join(strs)
+```
